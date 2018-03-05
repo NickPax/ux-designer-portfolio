@@ -1,0 +1,294 @@
+/*CAROUSEL*/
+
+@font-face {
+  font-family: 'THD.Sentient L';
+  src: url('../../THD_SENTIENT/THD.Sentient L.otf');
+}
+@font-face {
+  font-family: 'THD.Sentient X';
+  src: url('../../THD_SENTIENT/THD.Sentient X.otf');
+}
+
+@font-face {
+  font-family: 'THD.Sentient R';
+  src: url('../../THD_SENTIENT/THD.Sentient R.otf');
+}
+
+@font-face {
+  font-family: 'THD.Sentient B';
+  src: url('../../THD_SENTIENT/THD.Sentient B.otf');
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(-359.9999999deg);
+  }
+}
+
+.shape:hover {
+  /*-webkit-animation: spin pause;*/
+  -webkit-animation-play-state: paused;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  margin: 80px 0 auto;
+
+  -webkit-perspective: 550;
+  -webkit-perspective-origin: 50% 100px;
+  -webkit-transition: -webkit-perspective, 2s;
+  top: 30%;
+  left: 44%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    -webkit-perspective: 660;
+    -webkit-perspective-origin: 50% 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    -webkit-perspective: 960;
+    -webkit-perspective-origin: 50% 100px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .wrapper {
+    -webkit-perspective: 1500;
+    -webkit-perspective-origin: 50% 100px;
+  }
+}
+
+.shape {
+  margin: 150px auto;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: spin 20s infinite linear;
+  animation-delay: 2.5s;
+}
+
+/*.wrapper:hover {
+  -webkit-perspective-origin: 50% -100px;
+}*/
+
+.plane {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-size: 10em;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.plane .overlay {
+  /*display: none;*/
+  opacity: 0;
+  display: inline-block;
+  height: 200px;
+  background: rgba(25, 246, 232, 0);
+  border-radius: 10px;
+  -webkit-transition: opacity 0.35s; /* Safari */
+  transition: opacity 0.35s;
+  margin: auto;
+}
+
+/*.overlay {
+  width: 70px;
+}*/
+
+.plane p {
+  /* font-family: 'THD.Sentient R';*/
+  font-family: 'Roboto Mono', monospace;
+  opacity: 0;
+  /*padding-top: 110px;*/
+  /*  color: #1f3a38;*/
+  /* color: #ff0242;*/
+  /* color: #9df0eb;*/
+  color: #fff;
+  background: rgba(20, 20, 20, 0.9);
+  position: relative;
+  padding: 3px;
+  /*  bottom: 10px;
+  left: 40px;*/
+  font-size: 0.06em;
+  word-wrap: break-word;
+  margin-top: 180px;
+  border-radius: 4px;
+  border-style: solid;
+  /*  border-color: #19f6e8;*/
+  border-width: 2px;
+  -webkit-transition: opacity 0.35s; /* Safari */
+  transition: opacity 0.35s;
+  transition: border-radius 1s;
+  transform: scale(1.01);
+  transition: all 200ms ease-in;
+}
+
+.plane:hover p {
+  /*  display: block;*/
+  border-radius: 4px;
+  opacity: 1;
+  transform: scale(1.4);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.plane:hover .overlay {
+  /*  display: block;*/
+  opacity: 1;
+  transform: scale(1.1);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.p1 {
+  background-image: url('../images/me.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  -webkit-transform: translateZ(250px);
+  opacity: 0.8;
+  transition: all 500ms ease-in;
+}
+
+.p1:hover {
+  opacity: 0.95;
+  transition: opacity 0.6s;
+  /* filter: brightness(0.25);*/
+  /*   background: rgba(0, 0, 0, 0.6);*/
+  /*color: #19f6e8;*/
+}
+
+.p2 {
+  background-image: url('../images/main-projs.png');
+  /* background-size: 50% 10%;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 100%;
+  height: 100%;*/
+  /* object-fit: cover; /*magic*/
+  -webkit-transform: rotateY(45deg) translateZ(250px);
+  opacity: 0.8;
+  transition: all 500ms ease-in;
+}
+
+.p2:hover {
+  opacity: 0.95;
+  transition: opacity 0.6s;
+  /* filter: brightness(0.25);*/
+  /*   background: rgba(0, 0, 0, 0.6);*/
+  /*color: #19f6e8;*/
+}
+
+.p3 {
+  background-image: url('../images/belt.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(90deg) translateZ(250px);
+  opacity: 0.8;
+}
+
+.p4 {
+  background-image: url('../images/bch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(135deg) translateZ(250px);
+  opacity: 0.8;
+}
+
+.p5 {
+  background-image: url('../images/hivewire.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(180deg) translateZ(250px);
+  opacity: 0.7;
+}
+
+.p6 {
+  background-image: url('../images/dccper.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(225deg) translateZ(250px);
+  opacity: 0.8;
+}
+
+.p7 {
+  background-image: url('../images/current.png');
+  /* background-size: 50% 10%;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 100%;
+  height: 100%;*/
+  /* object-fit: cover; /*magic*/
+  -webkit-transform: rotateY(270deg) translateZ(250px);
+  opacity: 0.8;
+  transition: all 500ms ease-in;
+}
+
+.p7:hover {
+  opacity: 0.95;
+  transition: opacity 0.8s;
+  /* filter: brightness(0.25);*/
+  /*   background: rgba(0, 0, 0, 0.6);*/
+  /*color: #19f6e8;*/
+}
+
+.p8 {
+  background-image: url('../images/bch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(315deg) translateZ(250px);
+  opacity: 0.8;
+}
+
+.p9 {
+  background-image: url('../images/bch.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(315deg) translateZ(250px);
+  opacity: 0.8;
+}
+
+/*
+
+.meal-photo {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+     background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03)
+}
+
+*/

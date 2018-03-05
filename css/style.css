@@ -1,0 +1,248 @@
+/*second page*/
+
+a {
+  color: #fff;
+}
+
+/* -------- BUTTONS -------- */
+
+.btn:link,
+.btn:visited {
+  position: relative;
+  bottom: -80px;
+  margin: 50px;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 2px solid #e70b1b;
+  color: ##e70b1b;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #e70b1b;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #e70b1b;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 2px solid #e70b1b;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  background: rgb(20, 20, 20);
+  text-align: center;
+  height: 100vh;
+}
+
+h1 {
+  margin: 10px;
+  line-height: 1;
+}
+
+body {
+  margin: 0px;
+}
+
+.section-divider {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.5em;
+  background-color: #e70b1b;
+  /*  height: 7vh;*/
+  overflow: hidden;
+  display: block;
+  padding: 20px;
+  color: #fff;
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    margin: 8px;
+  }
+  .page-2-upper {
+    font-size: 80%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 8px;
+  }
+  .page-2-upper {
+    font-size: 60%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  body {
+    margin: 8px;
+  }
+  .page-2-upper {
+    font-size: 50%;
+    padding: 5px;
+  }
+}
+
+/*screen.orientation.lock('portrait')*/
+
+.page-2-lower {
+  background-color: yellow;
+  height: 75vh;
+  overflow: hidden;
+  display: block;
+}
+.description {
+  height: 200px;
+  color: green;
+  background: rgba(25, 777, 232, 1);
+}
+
+.tools {
+  height: 300px;
+  background: rgba(25, 246, 232, 1);
+}
+
+.top-div {
+  background-color: yellow;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: green;
+}
+
+.svg-wrapper {
+  position: relative;
+  top: 20%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 320px;
+}
+.svg-shape {
+  stroke-dasharray: 170 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+/*Roboto Condensed*/
+.text {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -73px;
+  left: 5px;
+  position: relative;
+  justify-content: center;
+}
+.svg-wrapper:hover .svg-shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 800;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid #19f6e8 transparent;
+  transition: border-bottom 0.4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 5px solid #19f6e8;
+}
+
+/*#wrapper {
+     width: 1005px;
+     margin: 0 auto;
+}*/
+#leftcolumn,
+#rightcolumn {
+  float: left;
+  margin-left: 180px;
+  min-height: 450px;
+  color: white;
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.4;
+}
+#leftcolumn {
+  width: 450px;
+}
+#rightcolumn {
+  width: 450px;
+}
+
+.section-footer {
+  /* background-color: #333;*/
+  height: 100vh;
+  background: rgb(20, 20, 20);
+  overflow: hidden;
+  display: block;
+  padding: 120px;
+  margin: 0 auto;
+}
+.me-description {
+  color: #fff;
+  margin: auto;
+  width: 400px;
+  line-height: 2px;
+  display: block;
+
+  margin-right: 50px;
+  background: yellow;
+}
+
+#tagline {
+  width: 300px;
+  min-height: 400px;
+  background: red;
+  float: right;
+}
